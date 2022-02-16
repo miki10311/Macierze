@@ -1,0 +1,48 @@
+Skrypt uruchomiony 2020-04-20 17:33:48+0200
+]0;nnn@nnn-Nitro-AN515-53: ~/Pulpit/tyd2[01;32mnnn@nnn-Nitro-AN515-53[00m:[01;34m~/Pulpit/tyd2[00m$ make[K[K[K[Kmake[K[K[K[Kls
+[0m[01;34minc[0m  Makefile  [01;34mobj[0m  [01;34msrc[0m  [01;34mtesty[0m  typescript  [01;32muklad_rownan[0m
+]0;nnn@nnn-Nitro-AN515-53: ~/Pulpit/tyd2[01;32mnnn@nnn-Nitro-AN515-53[00m:[01;34m~/Pulpit/tyd2[00m$ make
+g++ -c -g -Iinc -Wall -pedantic -o obj/main.o src/main.cpp
+g++ -c -g -Iinc -Wall -pedantic -o obj/UkladRownanLiniowych.o src/UkladRownanLiniowych.cpp
+g++ -c -g -Iinc -Wall -pedantic -o obj/Macierz.o src/Macierz.cpp
+g++ -c -g -Iinc -Wall -pedantic -o obj/Wektor.o src/Wektor.cpp
+g++ -Wall -pedantic -o uklad_rownan obj/main.o obj/Wektor.o\
+                                   obj/Macierz.o obj/UkladRownanLiniowych.o
+./uklad_rownan < testy/dane
+
+ Start programu 
+
+|2	1	1||x_1| |9|
+|2	2	3||x_2|=|8.5|
+|1	1.5	1||x_3| |8|
+
+Rozwiazanie x = (x1, x2, x3):
+2	1	3	
+Wektor bledu: Ax-b = (2.56761e-312	2.12203e-314	6.95325e-310)
+Dlugosc wektora bledu: ||Ax-b|| = 4.68852e-310
+]0;nnn@nnn-Nitro-AN515-53: ~/Pulpit/tyd2[01;32mnnn@nnn-Nitro-AN515-53[00m:[01;34m~/Pulpit/tyd2[00m$ make[2Plsscript[2Pexitssh mzapotoc@panamint.kcir.pwr.edu.plmake[K./uklad_rownan < testy/dane5[K[K[K[K[K[K/dane1
+
+ Start programu 
+
+|0	3	4||x_1| |4|
+|5	6	7||x_2|=|3|
+|9	9	9||x_3| |6|
+
+Rozwiazanie x = (x1, x2, x3):
+-2	5	-2.33333	
+Wektor bledu: Ax-b = (2.56761e-312	2.12203e-314	6.95293e-310)
+Dlugosc wektora bledu: ||Ax-b|| = 4.68036e-310
+]0;nnn@nnn-Nitro-AN515-53: ~/Pulpit/tyd2[01;32mnnn@nnn-Nitro-AN515-53[00m:[01;34m~/Pulpit/tyd2[00m$ ./uklad_rownan < testy/dane1[K3[K2
+
+ Start programu 
+
+|8	4	3||x_1| |1|
+|3	3	3||x_2|=|1|
+|2	2	2||x_3| |1|
+
+Rozwiazanie x = (x1, x2, x3):
+Uklad nieoznaczony, nieskonczenie wiele rozwiazan
+]0;nnn@nnn-Nitro-AN515-53: ~/Pulpit/tyd2[01;32mnnn@nnn-Nitro-AN515-53[00m:[01;34m~/Pulpit/tyd2[00m$ exit
+exit
+
+Skrypt wykonany 2020-04-20 17:35:10+0200
